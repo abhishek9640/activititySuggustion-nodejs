@@ -1,4 +1,4 @@
-const apiCaller = require('./api');
+const apiCaller = require('../api');
 const express = require('express');
 const cors = require('cors');
 
