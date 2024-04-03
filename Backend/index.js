@@ -6,6 +6,12 @@ const app = express();
 app.use(cors());
 const port = 3001;
 
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+  
+  // Increase the limit of listeners after the server starts
+  require('events').EventEmitter.defaultMaxListeners = 15;
+});
 
 app.get('/social-activities', async (req, res) => {
   const type = "social";
@@ -31,8 +37,3 @@ app.get('/education-activities', async (req, res) => {
   const type = "education";
   apiCaller(req, res, type);
 });
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
-
