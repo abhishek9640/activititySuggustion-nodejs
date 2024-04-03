@@ -1,24 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "next.config.js",
-        "use": "@vercel/node",
-        "config": {}
-      },
-      {
-        "src": "pages/api/**/*.js",
-        "use": "@vercel/node",
-        "config": {}
-      },
-      {
-        "src": "public/**/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "pages/**/*",
-        "use": "@vercel/next"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/node",
+      "config": {}
+    },
+    {
+      "src": "pages/api/**/*.js",
+      "use": "@vercel/node",
+      "config": {}
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "pages/**/*",
+      "use": "@vercel/next"
+    },
+    {
+      "src": "app/**/*",
+      "use": "@vercel/static"
+    }
+  ]
+}

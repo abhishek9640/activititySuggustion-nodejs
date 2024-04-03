@@ -7,7 +7,7 @@ app.use(cors());
 const port = 3001;
 
 
-app.get('/social-activities', async (req, res) => {
+app.get('/', async (req, res) => {
   const type = "social";
   apiCaller(req, res, type);
 });
